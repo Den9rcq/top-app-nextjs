@@ -1,5 +1,5 @@
 import type { NextPage } from 'next'
-import { Button, Htag, P } from '../components'
+import { Button, Htag, P, Tag } from '../components'
 
 const Home: NextPage = () => {
   return (
@@ -10,6 +10,16 @@ const Home: NextPage = () => {
       <P size="s">Маленький</P>
       <P>Средний</P>
       <P size="l">Большой</P>
+      <Tag>Ghost маленький</Tag>
+      <Tag size="m">Ghost большой</Tag>
+      <Tag color="gray">Gray маленький</Tag>
+      <Tag color="gray" size="m">Gray маленький</Tag>
+      <Tag color="green">Green маленький</Tag>
+      <Tag color="green" size="m">Green маленький</Tag>
+      <Tag color="red">Red маленький</Tag>
+      <Tag color="red" size="m">Red маленький</Tag>
+      <Tag color="primary">Primary маленький</Tag>
+      <Tag color="primary" size="m">Primary маленький</Tag>
     </>
   )
 }
