@@ -1,11 +1,22 @@
 import type { NextPage } from 'next'
-import { Button, Htag, P, Tag } from '../components'
+import { Button, Htag, P, Rating, Tag } from '../components'
+import { useState } from 'react'
 
 const Home: NextPage = () => {
+  const [counter, setCounter] = useState<number>(0)
+  const [rating, setRating] = useState<number>(4)
   return (
     <>
-      <Htag tag="h1">gg</Htag>
-      <Button appearance="primary" arrow="right">Primary</Button>
+      <Htag tag="h1">
+        {counter}
+      </Htag>
+      <Button
+        appearance="primary"
+        arrow="right"
+        onClick={() => setCounter((count) => count + 1)}
+      >
+        Primary
+      </Button>
       <Button appearance="ghost" arrow="down">Ghost</Button>
       <P size="s">Маленький</P>
       <P>Средний</P>
@@ -20,6 +31,7 @@ const Home: NextPage = () => {
       <Tag color="red" size="m">Red маленький</Tag>
       <Tag color="primary">Primary маленький</Tag>
       <Tag color="primary" size="m">Primary маленький</Tag>
+      <Rating rating={rating} isEditable setRating={setRating}/>
     </>
   )
 }
